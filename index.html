@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U2P Simulator</title>
+    <title>U2P</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
     <link rel="stylesheet" type="text/css" href="/assets/main.css"/>
@@ -33,24 +33,27 @@
     <!-- hero section -->
     <section id="home" class="min-h-100vh flex justify-start items-center">
         <div class="mx-5 md-mx-l5">
-            <div class="inline-block br-round bg-indigo-30 indigo-lightest p-2 fs-s2 mb-5">
-                <div class="inline-block bg-indigo indigo-lightest br-round px-3 py-1 mr-3 fs-s3">Join Meet Up</div>
-                We are coming to Singapore. Learn more…
-            </div>
+            <button type="button" id="event">U2P Simulator coming soon. Learn more…</button>
+                <!-- <div class="inline-block indigo-lightest br-round px-3 py-1 mr-3 fs-s3" id="button_event">Join Meet Up</div> -->
+            
+
+            <!-- 3d animation -->
             <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.507/build/spline-viewer.js"></script>
             <spline-viewer url="https://prod.spline.design/FVuvWWlPn0qgptAT/scene.splinecode"></spline-viewer>
+
             <div>
-                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Serve Your <br />Website Fast</h1>
+
+                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900" id="text_c">Making people's<br>lives <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 " id="change_word"></h1></h1><br>
 
                 <div class="br-8 mt-10 inline-flex">
-                    <input type="text"
+                    <!-- <input type="text"
                         class="input-lg half bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 min-w-25vw br-r-0"
-                        placeholder="Email Address">
-                    <button
-                        class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fw-300 fs-s3 mr-0 br-l-0">Get
-                        Started</button>
+                        placeholder="Email Address"> -->
+                        <a href="https://u2p.kz"><button
+                    class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fs-s1" id="our_project">Our
+                        Projects</button></a>
                 </div>
-                <div class="white opacity-20 fs-s3 mt-3">No credit card required</span>
+                
             </div>
         </div>
     </section>
@@ -61,10 +64,9 @@
             <div class="w-100pc md-w-40pc">
                 <div class="br-8 p-5 m-5">
                     <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="inbox" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Storage</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            data-feather="code" class="w-l5"></i></div>
+                    <h4 class="white fw-600 fs-m3 mb-5">Web Development</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">We craft modern websites, from simple pages to complex online platforms. Our team uses the latest technologies to bring your ideas to life.</div>
                     <a href="#"
                         class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
                 </div>
@@ -72,10 +74,9 @@
             <div class="w-100pc md-w-40pc">
                 <div class="br-8 p-5 m-5">
                     <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="cpu" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Compute</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            data-feather="monitor" class="w-l5"></i></div>
+                    <h4 class="white fw-600 fs-m3 mb-5">Desktop Applications</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Developing applications for your computer, ensuring convenience and functionality. Reliable solutions for your business or personal use.</div>
                     <a href="#"
                         class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
                 </div>
@@ -83,10 +84,12 @@
             <div class="w-100pc md-w-40pc">
                 <div class="br-8 p-5 m-5">
                     <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="database" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Database</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            data-feather="eye" class="w-l5"></i></div>
+                    <h4 class="white fw-600 fs-m3 mb-5">Computer Vision</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Implementing advanced computer vision techniques to enable machines to interpret and understand the visual world.
+
+                    </div>
+                    <br>
                     <a href="#"
                         class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
                 </div>
@@ -95,7 +98,7 @@
     </section>
 
     <!-- slider -->
-    <section class="relative bg-indigo-lightest-10">
+    <!-- <section class="relative bg-indigo-lightest-10">
         <div id="slider-1">
             <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
                 <h2 class="white fs-l3 fw-900">Lorem ipsum dolor sit amet, consectetur</h2>
@@ -124,14 +127,13 @@
                     class="next mr-10 br-round border-indigo-lightest indigo-lightest  bg-transparent flex justify-center items-center p-2  focus-indigo-lighter outline-none"><i
                         data-feather="chevron-right"></i></button></li>
         </ul>
-    </section>
+    </section> -->
 
     <!-- big text -->
-    <section class="p-10 md-py-10">
+    <section class="p-10 md-py-10" id="big_text">
         <div class="w-100pc md-w-70pc mx-auto py-10">
             <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
-                Lorem ipsum dolor sit amet, <span class="border-b bc-indigo bw-4"> consectetur</span> adipiscing elit,
-                sed do eiusmod tempor </h2>
+                Crafting products that <span class="border-b bw-4" id="span_bc">revolutionize and enhance</span> the world <br>we live in</h2>
         </div>
     </section>
 
@@ -417,7 +419,7 @@
     <footer class="p-5 md-p-l5 bg-indigo-lightest-10">
         <div class="flex flex-wrap">
             <div class="md-w-25pc mb-10">
-                <img src="assets/images/logo.png" class="w-l5" alt="">
+                <img src="assets/images/logo.svg" class="w-l5" alt="">
                 <div class="white opacity-70 fs-s2 mt-4 md-pr-10">
                     <p>Soluta voluptate et optio. Eos quasi impedit sapiente aliquid eius eligendi at. Necessitatibus
                         magni et sed quod quas minima.</p>
@@ -487,14 +489,17 @@
             </div>
         </div>
     </footer>
-    <a class="fixed top-50pc right-0 p-3 bg-indigo white hover-scale-up-1 ease-300 no-underline" href="https://gum.co/tifJM" target="_blank" >
-        <i class="w-4" data-feather="download"></i>
+   
+    <!-- <a class="fixed top-50pc right-0 p-3 bg-indigo white hover-scale-up-1 ease-300 no-underline" href="https://gum.co/tifJM" target="_blank" >
+        <i class="w-4" data-feather="download"></i>-->
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script> -->
     <script src="assets/js/script.js"></script>
+    
 </body>
 
 </html>

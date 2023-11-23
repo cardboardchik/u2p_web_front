@@ -39,3 +39,18 @@ $(document).ready(function () {
         }, ]
     });
 });
+
+const texts = ['easier', 'safer', 'more interesting', 'more fun']
+let point = -1;
+
+function changeText(){
+    
+    if (point == texts.length - 1){
+        point = -1;
+    }
+    $("#change_word").fadeOut(function(){$("#change_word").html(`${texts[point]}`).fadeIn()})
+    
+    point++;
+}
+setInterval(changeText, 1500)
+changeText()

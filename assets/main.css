@@ -4,6 +4,9 @@
 .slick-loading .slick-list {
     background: #fff url('./ajax-loader.gif') center center no-repeat;
 }
+#text_c, #change_word{
+    display: inline;
+}
 
 /* Icons */
 @font-face {
@@ -14,6 +17,7 @@
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
+
 nav {
     background-color: #18181a;
 }
@@ -43,13 +47,37 @@ a:hover{
     color: white;
     background: #F7931E;
 }
-section {
+#event{
+    background-color: rgb(247, 147, 30);
+    color: #fff;  
+   
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 15px;
+    border-radius: 45px;
+    border: 0;
+}
+#event:hover{ 
+    transition: 1s;
+    padding: 12px 12px 12px 12px;
+
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(247, 147, 30, 0.2);
+    background: red;
+}
+/* #event #button_event{
+    background-color:#ED1C24;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+} */
+/* #our_project{
+
+} */
+#home {
     position: relative;
     width: 100%; /* или любая другая ширина, которую вы хотите использовать */
     height: 100vh; /* устанавливаем высоту равной высоте окна просмотра */
     overflow: hidden;
     background-color: #1E1E1E;
-    z-index: 1;
+    z-index: 0;
 
 
 }
@@ -61,6 +89,16 @@ spline-viewer {
     z-index: -1;
     
     
+}
+
+#features{
+    background-color: #000;
+}
+#big_text{
+    background-color: #000;
+}
+#span_bc{
+    border-color: #ED1C24;
 }
 /* Arrows */
 .slick-prev,
