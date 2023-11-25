@@ -54,3 +54,23 @@ function changeText(){
 }
 setInterval(changeText, 1500)
 changeText()
+
+$('#topBtn').css('display', 'none')
+
+window.onscroll = function() {scrollCheck()};
+
+function scrollCheck(){
+    if (document.body.scrollTop > 140 || document.documentElement.scrollTop > 140){
+        $('#topBtn').css('display', 'block')
+    }
+    else{
+        $('#topBtn').css('display', 'none')
+    }
+}
+
+
+function scrollTop1(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
+}
+
