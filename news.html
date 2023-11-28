@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2P</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css" href="/assets/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bg-black muli">
+    <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5">
+        <div class="flex justify-between">
+            <a href="index.html" class="flex items-center p-2 mr-4 no-underline">
+                <img class="logo" src="assets/images/u2p_logo_white.svg">
+            </a>
+            <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
+                class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+        <div id="nav-items" class="hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
+            <b><a href="index.html" class="fs-s1 mx-3 py-3">Home</a>
+            <div class="dropdown">
+                <a href="#projects" class="fs-s1 mx-3 py-3" id="projects_dropdown_m">Projects <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown_content">
+                    <a href="https://u2p.kz/" target="_blank"><img src="assets/images/u2p_sim_logo_black.png" alt="U2P Simulator" id="u2p_nav_prod_logo">U2P Simulator</a>
+                    <a href="https://schoolshp.kz/" target="_blank"><img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" id="shp_nav_prod_logo">School of Entrepreneurs</a>
+                </div>
+            </div>
+            <a href="about.html" class="fs-s1 mx-3 py-3">About</a>
+            <a href="news.html" class="fs-s1 mx-3 py-3" id="current_page">News</a>
+            <a href="#contact" class="fs-s1 mx-3 py-3 ">Contact</a></b>
+            <!-- <a href="#" id="reg" class="">Register</a> -->
+        </div>
+    </nav>
+
+    
+    
+    <!-- top-scroll-button -->
+    <button type="button" onclick="scrollTop1()" title="Go to Top" id="topBtn"><i data-feather="arrow-up"></i></button>
+
+    <!-- footer -->
+    <footer class="p-5 md-p-l5 bg-indigo-lightest-10">
+        <div class="flex flex-wrap" id="flex_div">
+            <div class="md-w-25pc mb-10">
+                <a href="#"><img src="assets/images/u2p_logo_white.svg" class="" alt="u2p logo" id="footer_logo">
+                </a>
+            </div>
+            <div class="w-100pc md-w-50pc">
+                <div class="flex justify-around">
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Company</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">About
+                                    Us</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Jobs</a>
+                            </li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Contact</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Media</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Products</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="https://u2p.kz/" target="_blank" class="white opacity-70 no-underline hover-underline">U2P Simulator</a></li>
+                            <li class="my-3"><a href="https://schoolshp.kz/" target="_blank" class="white opacity-70 no-underline hover-underline">School of Entrepreneurs</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Support</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Contact Us</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100pc md-w-25pc">
+                <div class="flex justify-around my-8">
+                    <a href="https://twitter.com/Karton4ik2" target="_blank" class="relative p-5 br-round black hover-scale-up-1 ease-400" id="social_n"><i
+                            data-feather="x" class="absolute-center h-4"></i></a>
+                    <!-- <a href="#" target="_blank" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
+                            data-feather="telegram" class="absolute-center h-4"></i></a> -->
+                    <a href="https://www.instagram.com/u2p.kz/" target="_blank" class="relative p-5 br-round black hover-scale-up-1 ease-400" id="social_n"><i
+                            data-feather="instagram" class="absolute-center h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    <!-- <a class="fixed top-50pc right-0 p-3 bg-indigo white hover-scale-up-1 ease-300 no-underline" href="https://gum.co/tifJM" target="_blank" >
+        <i class="w-4" data-feather="download"></i>-->
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script> -->
+    <script src="assets/js/script.js"></script>
+    
+</body>
+
+</html>

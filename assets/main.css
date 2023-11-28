@@ -26,6 +26,9 @@ nav {
     background-color: #18181a;
 }
 
+#current_page {
+    color: #F7931E;
+}
 
 .logo{
     width: 150px;
@@ -66,7 +69,7 @@ a:hover{
     border-radius: 5px;
     width: 170px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 999;
 }
 
 .dropdown_content a {
@@ -106,10 +109,10 @@ a:hover{
     border: 0;
 }
 #event:hover{ 
-    transition: 1s;
+    transition: 0.5s;
     padding: 12px 12px 12px 12px;
-
-    margin-bottom: 20px;
+    
+    
     box-shadow: 0px 8px 16px 0px rgba(247, 147, 30, 0.2);
     background: red;
 }
@@ -130,13 +133,12 @@ a:hover{
 
 
 }
-spline-viewer {
+#home_3d {
     position:absolute;
     margin-left: 30%;
     top:-100px;
     height: 1000px;
     z-index: -1;
-    
     
 }
 
@@ -214,4 +216,55 @@ spline-viewer {
     width: 60px;
     height: 60px;
     margin: 0 -5px -5px 0;
+}
+
+/* About page */
+#head_section_about {
+    position: relative;
+    background: rgba(255, 255 ,255, .1);
+    backdrop-filter: blur0(10px);
+    
+}
+
+#about_3d {
+    width: 100%;
+    height: 500px;
+    
+}
+#blurrrr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    backdrop-filter: blur(4px);
+    z-index: 99;
+}
+
+#head_about {
+    font-size: 108px;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 6vw;
+    text-align: center;
+    z-index: 100;
+}
+
+#black_rectangle {
+    width: 100%;
+    height: 100px;
+
+    background-color: #000;
+    
+    position: absolute;
+    margin-top: -100px;
+    z-index: 99;
+}
+
+.paragraph_about {
+    font-size: 28px;
+    color: #fff;
+    padding: 0 125px 0 125px;
+    
 }
