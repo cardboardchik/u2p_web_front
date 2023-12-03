@@ -4,14 +4,6 @@ html{
     scroll-behavior: smooth;
 }
 
-/* Slider */
-.slick-loading .slick-list {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
-}
-#text_c, #change_word{
-    display: inline;
-}
-
 /* Icons */
 @font-face {
     font-family: 'slick';
@@ -125,8 +117,8 @@ a:hover{
 } */
 #home {
     position: relative;
-    width: 100%; /* или любая другая ширина, которую вы хотите использовать */
-    height: 100vh; /* устанавливаем высоту равной высоте окна просмотра */
+    width: 100%; 
+    height: 100vh; 
     overflow: hidden;
     background-color: #1E1E1E;
     z-index: 0;
@@ -135,11 +127,25 @@ a:hover{
 }
 #home_3d {
     position:absolute;
-    margin-left: 30%;
-    top:-100px;
+    margin-left: 20%;
+    top:-60px;
     height: 1000px;
     z-index: -1;
     
+}
+#home_2d {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top:-30px;
+    z-index: -1;
+    margin-left: -20px;
+}
+#home_2d {display: none;}
+@media (max-width: 640px) {
+    #home_2d { display: block }
+    #home_3d { display: none }
 }
 
 #features{
