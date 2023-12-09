@@ -52,17 +52,36 @@ const html_psw = ['<i><svg xmlns="http://www.w3.org/2000/svg" width="20" height=
 let psw_show = 0;
 $('#show_hide_psw').click(function(){
     if (psw_show == 0){
-        $('#exampleInputPassword1').attr('type', 'text');
+        $('#InputPassword').attr('type', 'text');
+        $('#InputConfirmPassword').attr('type', 'text');
         psw_show = 1;
 
         $('#show_hide_psw').html(`${html_psw[1]}`)
     }
     else{
-        $('#exampleInputPassword1').attr('type', 'password');
+        $('#InputPassword').attr('type', 'password');
+        $('#InputConfirmPassword').attr('type', 'password');
         psw_show = 0;
 
         $('#show_hide_psw').html(`${html_psw[0]}`)
     }
 
 })
+
+
+
+let check = function() {
+    if (document.getElementById('InputPassword').value == document.getElementById('InputConfirmPassword').value){
+        document.getElementById('InputPassword').style.border = '2px solid green';
+        document.getElementById('InputConfirmPassword').style.border = '2px solid green';
+        document.getElementById('reg_submit_btn').disabled = false;
+        document.getElementById('message').innerHTML = '';
+    }
+    else{
+        document.getElementById('InputPassword').style.border = '2px solid red';
+        document.getElementById('InputConfirmPassword').style.border = '2px solid red';
+        document.getElementById('reg_submit_btn').disabled = true;
+        document.getElementById('message').innerHTML = 'Passwords not matching';
+    }
+}
 
