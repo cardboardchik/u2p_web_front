@@ -71,17 +71,26 @@ $('#show_hide_psw').click(function(){
 
 
 let check = function() {
-    if (document.getElementById('InputPassword').value == document.getElementById('InputConfirmPassword').value){
-        document.getElementById('InputPassword').style.border = '2px solid green';
-        document.getElementById('InputConfirmPassword').style.border = '2px solid green';
-        document.getElementById('reg_submit_btn').disabled = false;
-        document.getElementById('message').innerHTML = '';
+    if (document.getElementById('InputPassword').value == document.getElementById('InputConfirmPassword').value ){
+        if (document.getElementById('InputPassword').value == '' && document.getElementById('InputConfirmPassword').value == ''){
+            document.getElementById('InputPassword').style.border = '2px solid yellow';
+            document.getElementById('InputConfirmPassword').style.border = '2px solid yellow';
+            document.getElementById('reg_submit_btn').disabled = true;
+            document.getElementById('message').innerHTML = 'Enter a password!';
+        }
+        else{
+            document.getElementById('InputPassword').style.border = '2px solid green';
+            document.getElementById('InputConfirmPassword').style.border = '2px solid green';
+            document.getElementById('reg_submit_btn').disabled = false;
+            document.getElementById('message').innerHTML = '';
+        }
+        
     }
     else{
         document.getElementById('InputPassword').style.border = '2px solid red';
         document.getElementById('InputConfirmPassword').style.border = '2px solid red';
         document.getElementById('reg_submit_btn').disabled = true;
-        document.getElementById('message').innerHTML = 'Passwords not matching';
+        document.getElementById('message').innerHTML = 'Passwords not matching!';
     }
 }
 
