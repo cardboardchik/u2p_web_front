@@ -1,6 +1,6 @@
 
 
-html{
+html, body{
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -343,10 +343,11 @@ a:hover{
     z-index: 1;
     position: absolute;
     width: 100%;
-    top: 6vw;
+    top: 7vw;
     text-align: center;
     z-index: 100;
 }
+
 
 #black_rectangle {
     width: 100%;
@@ -363,6 +364,27 @@ a:hover{
     font-size: 28px;
     color: #fff;
     padding: 0 7vw 0 7vw;
+    margin: 0;
+    background-color: #000;
+    
+}
+
+/* log and reg */
+.log_reg_nav{
+    z-index: 999;
+    color: #F0EEFF;
+    position: absolute;
+    background:none;
+    top: 40px;
+    right: 0;
+    
+}
+.log_reg_nav ul li{
+    font-size: 18px;
+    display: inline;
+    text-decoration: none;
+    padding: 0 0 0 15px;
+
     
 }
 
@@ -441,4 +463,50 @@ a:hover{
 }
 #reg_submit_btn{
     margin-bottom: 50px;
+}
+
+
+/* news */
+#head_news{
+    font-size: 108px;
+    color: #fff;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 110px;
+    text-align: center;
+    z-index: 100;
+}
+
+.news_card{
+    transition: 0.7s;
+    background-color: #000;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.news_card:hover{
+    transform: scale(1.1);
+    background-color: #1E1E1E;
+
+}
+
+.text_news{
+    margin-top: auto;
+}
+
+
+
+.news_card .author_name{
+    transition: 0.7s;
+    opacity: 0.5;
+    margin-bottom: 0;
+}
+
+.news_card:hover .author_name{
+    opacity: 1;
+    color: #F7931E;
+
+
 }
