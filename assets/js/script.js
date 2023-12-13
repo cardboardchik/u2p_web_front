@@ -9,7 +9,20 @@ $(document).ready(function () {
     // feather icons
     feather.replace();
 
+
+
 });
+
+
+
+$(function(){
+    $.get('news.html', function(result){
+        let last_n = $(result).find('.main_text').html(); // find last news
+        $("#event").html(`${last_n} Learn more...`)
+    });
+});
+
+
 
 const texts = ['easier', 'safer', 'more interesting', 'more fun']
 let point = -1;
@@ -25,6 +38,7 @@ function changeText(){
 }
 setInterval(changeText, 1500)
 changeText()
+
 
 $('#topBtn').css('display', 'none')
 
@@ -43,6 +57,27 @@ function scrollTop1(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0
 }
+
+
+
+
+//
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add("show")
+        }
+        // else{
+        //     entry.target.classList.remove("show")
+        // }
+    })
+})
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+
+hiddenElements.forEach((element) => observer.observe(element))
 
 
 // log|reg

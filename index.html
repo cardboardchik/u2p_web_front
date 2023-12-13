@@ -50,8 +50,9 @@
     <!-- hero section -->
     <section id="home" class="d-flex justify-content-start align-items-center">
         <div class="m-5 p-3">
-            <button type="button" id="event">U2P Simulator coming soon. Learn more…</button>
-        
+            <div class="hidden main_slow_hiden">
+                <button type="button" id="event">U2P Simulator coming soon. Learn more…</button>
+            </div>
             
 
             <!-- 3d animation -->
@@ -59,7 +60,7 @@
             <spline-viewer url="https://prod.spline.design/FVuvWWlPn0qgptAT/scene.splinecode" id="home_3d"></spline-viewer>
             <img src="assets/images/ClonerCubesGenerative.png" id="home_2d">
 
-            <div>
+            <div class="hidden main_slow_hiden">
                 <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax">Making people's<br>lives </h1>
                     <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="change_word" style="font-weight: 900; font-size: 5vmax"></h1>
                 
@@ -78,10 +79,10 @@
     </section>
 
     <!-- features -->
-    <section id="features">
+    <section class="" id="features">
         <div class="d-flex flex-column flex-md-row mx-auto">
-            <div class="">
-                <div class="features_cart">
+            <div class="features_cart hidden">
+                <div class="features_content">
                     <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
                         <i data-feather="code" class="text-white"></i>
                     </div>
@@ -91,8 +92,8 @@
                         class="btn btn btn-light read_button">Read</a>
                 </div>
             </div>
-            <div class="">
-                <div class="features_cart">
+            <div class="features_cart hidden">
+                <div class="features_content">
                     <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px"><i
                             data-feather="monitor" class="text-white"></i></div>
                     <h4 class="text-white fw-600 fs-3 mb-3">Desktop Applications</h4>
@@ -101,8 +102,8 @@
                         class="btn btn btn-light read_button">Read</a>
                 </div>
             </div>
-            <div class="">
-                <div class="features_cart">
+            <div class="features_cart hidden">
+                <div class="features_content">
                     <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px"><i
                             data-feather="eye" class="text-white"></i></div>
                     <h4 class="text-white fw-600 fs-3 mb-3">Computer Vision</h4>
@@ -119,7 +120,7 @@
 
 
     <!-- big text -->
-    <section class="big_text_section">
+    <section class="big_text_section hidden">
         <div>
             <h2>
                 Crafting products that <span class="border-bottom border-danger border-5">revolutionize and enhance</span> the world we live in</h2>
@@ -130,7 +131,7 @@
     <section class="" id="projects">
         <div class="container">
             <div class="row">
-                <div class="d-flex col-md-6 product_option">
+                <div class="d-flex col-md-6 product_option hidden">
                     <div class="p-3 m-2 rounded bg_white_black">
                         <img src="assets/images/u2p_sim_logo_white.png" alt="U2P Simulator" class="u2p_product_logo">
                         <div class="text-white fw-bold fs-6">Competitive Simulator of Economics and Management (CSEM).</div>
@@ -140,7 +141,7 @@
                         <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank" class="btn btn-dark text-white read_button product_option_btn">Read</a>
                     </div>
                 </div>
-                <div class="d-flex col-md-6 product_option">
+                <div class="d-flex col-md-6 product_option hidden">
                     <div class="p-3 m-2 bg-light rounded">
                         <img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" class="shp_product_logo">
                         <div class="text-dark fw-bold fs-6">One of our projects for an educational institution was the website of the School of Entrepreneurs.</div>
@@ -157,7 +158,7 @@
 
 
     <!-- contact -->
-    <section class="" id="contact" style="background-color: black; padding: 15vh 6vw 15vh 6vw;">
+    <section class="hidden" id="contact" style="background-color: black; padding: 15vh 6vw 15vh 6vw;">
         <div class="rounded bg_white_black p-4 md:p-5 d-flex flex-wrap justify-content-between align-items-center">
             <div class="w-100 col-md-4">
                 <h2 class="text-white fs-5 fw-bold">Contact Us</h2>
