@@ -15,10 +15,65 @@ $(document).ready(function () {
 
 
 
+if (sessionStorage.getItem("user") != null){
+    $("#reg").html('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="1 1 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/></svg>Profile');
+    $("#reg_link").attr("href", "profile.html")
+
+
+    // profile
+    const user = JSON.parse(localStorage.getItem(sessionStorage.getItem("user")));
+
+    $('#profile_name').text(`${user['firstname']} ${user['lastname']}`)
+    $('#profile_email').text(user['email'])
+
+    $('#InputFirstname').val(user['firstname'])
+    $('#InputLastname').val(user['lastname'])
+    $('#InputDateofBirth').val(user['dateofbirth'])
+    $('#InputCityBirth').val(user['city'])
+    $('#InputRegion').val(user['region'])
+    $('#InputCountry').val(user['country'])
+    $('#InputHomeAddress').val(user['adress'])
+    $('#InputPhoneNumber').val(user['phone'])
+    $('#InputPassword').val(user['password'])
+    $('#InputConfirmPassword').val(user['password'])
+
+}
+
+function log_out() {
+    sessionStorage.clear();
+    window.location.href = "index.html";
+}
 
 
 const setUserId = () => {
     return localStorage.length;
+}
+
+let inputEmailBool = true;
+let inputPassBool = true;
+
+function checkExsistUserByEmail() {
+    $('#RegInputEmail').css('border', '0')
+    $('#message_email').text("")
+    inputEmailBool = true
+    if (inputPassBool == true){
+        document.getElementById('reg_submit_btn').disabled = false;
+    }
+
+    let inputEmail = $('#RegInputEmail').val();
+    for (let i = 0; i < localStorage.length; i++){
+        let got_user = JSON.parse(localStorage.getItem(`user${i}`));
+        if (got_user != null){
+            if (got_user["email"] == inputEmail){
+                $('#RegInputEmail').css('border', '2px solid red')
+                $('#message_email').text("A person with this email already exists")
+                document.getElementById('reg_submit_btn').disabled = true;
+                inputEmailBool = false
+            }
+        }
+    }
+
+    
 }
 
 function addUser() {
@@ -50,19 +105,27 @@ function addUser() {
 }
 
 function getUsers() {
-    let users = [];
 
     let email = $('#exampleInputEmail1').val();
     let pass = $('#InputPassword').val();
     for (let i = 0; i < localStorage.length; i++){
         let got_user = JSON.parse(localStorage.getItem(`user${i}`));
-        if (got_user["email"] == email && got_user["password"] == pass){
-            console.log(`user${i}`)
+        if (got_user != null){
+            if (got_user["email"] == email && got_user["password"] == pass){
+                sessionStorage.setItem("user", `user${i}`);
+                window.location.href = "index.html";
+            }
         }
-       
+    }
+
+    if (sessionStorage.getItem('user') == null){
+        $("#message").text("Incorrect password or email");
+        $('.form_login').submit(function () {return false;});
     }
     
 }
+
+
 
 // console.log(localStorage.getItem('id'))
 
@@ -162,22 +225,26 @@ let check = function() {
         if (document.getElementById('InputPassword').value == '' && document.getElementById('InputConfirmPassword').value == ''){
             document.getElementById('InputPassword').style.border = '2px solid yellow';
             document.getElementById('InputConfirmPassword').style.border = '2px solid yellow';
-            document.getElementById('reg_submit_btn').disabled = true;
             document.getElementById('message').innerHTML = 'Enter a password!';
         }
         else{
             document.getElementById('InputPassword').style.border = '2px solid green';
             document.getElementById('InputConfirmPassword').style.border = '2px solid green';
-            document.getElementById('reg_submit_btn').disabled = false;
             document.getElementById('message').innerHTML = '';
+            inputPassBool = true;
+            if (inputEmailBool == true){
+                document.getElementById('reg_submit_btn').disabled = false;
+            }
         }
         
     }
     else{
         document.getElementById('InputPassword').style.border = '2px solid red';
         document.getElementById('InputConfirmPassword').style.border = '2px solid red';
-        document.getElementById('reg_submit_btn').disabled = true;
         document.getElementById('message').innerHTML = 'Passwords not matching!';
+        document.getElementById('reg_submit_btn').disabled = true;
+        inputPassBool = false;
+        
     }
 }
 
