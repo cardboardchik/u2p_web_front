@@ -15,6 +15,8 @@ $(document).ready(function () {
 
 
 
+// console.log(localStorage.getItem('id'))
+
 $(function(){
     $.get('news.html', function(result){
         let last_n = $(result).find('.main_text').html(); // find last news
