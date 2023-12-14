@@ -15,7 +15,57 @@ $(document).ready(function () {
 
 
 
+
+
+const setUserId = () => {
+    return localStorage.length;
+}
+
+function addUser() {
+    let email = $('#RegInputEmail').val();
+    let firstname = $('#InputFirstname').val();
+    let lastname = $('#InputLastname').val();
+    let dateofbirth = $('#InputDateofBirth').val();
+    let city = $('#InputCityBirth').val();
+    let region = $('#InputRegion').val();
+    let country = $('#InputCountry').val();
+    let adress = $('#InputHomeAddress').val();
+    let phone = $('#InputPhoneNumber').val();
+    let password = $('#InputPassword').val();
+
+    const user = {
+        "email": email,
+        "firstname": firstname,
+        "lastname": lastname,
+        "dateofbirth": dateofbirth,
+        "city": city,
+        "region": region,
+        "country": country,
+        "adress": adress,
+        "phone": phone,
+        "password": password,
+    }
+
+    localStorage.setItem(`user${setUserId()}`, JSON.stringify(user))
+}
+
+function getUsers() {
+    let users = [];
+
+    let email = $('#exampleInputEmail1').val();
+    let pass = $('#InputPassword').val();
+    for (let i = 0; i < localStorage.length; i++){
+        let got_user = JSON.parse(localStorage.getItem(`user${i}`));
+        if (got_user["email"] == email && got_user["password"] == pass){
+            console.log(`user${i}`)
+        }
+       
+    }
+    
+}
+
 // console.log(localStorage.getItem('id'))
+
 
 $(function(){
     $.get('news.html', function(result){
