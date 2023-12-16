@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U2P</title>
+    <title>U2P Simulator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
     <link rel="stylesheet" type="text/css" href="/assets/main.css"/>
@@ -13,10 +13,21 @@
 </head>
 
 <body class="">
+    <div class="bg-black back_to_main" >
+        
+        <a href="index.html" class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-left" viewBox="0 1 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            
+            Back to U2P
+            <img src="assets/images/u2p_logo_white.svg" style="margin-left: 10px;">
+        </a>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 20px 50px 20px 2.5vmax;">
     <div class="container-fluid">
         <a href="index.html" class="navbar-brand">
-            <img class="logo" src="assets/images/u2p_logo_white.svg">
+            <img class="logo" src="assets\images\u2p_sim_logo_white.png">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,19 +35,10 @@
            
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3" style="margin-right: 10px;">
-                <li class="nav-item"><a href="index.html" class="nav-link" id="current_page" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item">
-                    <div class="dropdown">
-                        <a href="#projects" class="text-reset nav-link" id="projects_dropdown_m">Projects <i class="fa fa-caret-down"></i></a>
-                        <div class="dropdown_content">
-                            <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank"><img src="assets/images/u2p_sim_logo_black.png" alt="U2P Simulator" id="u2p_nav_prod_logo">U2P Simulator</a>
-                            <a href="https://schoolshp.kz/" target="_blank"><img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" class="w-100">School of Entrepreneurs</a>
-                        </div>
-                    </div>
+                <li class="nav-item"><a href="simulator.html" class="nav-link" id="current_page" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item"><a href="about.html" class="text-reset nav-link">About</a></li>
-                <li class="nav-item"><a href="news.html" class="text-reset nav-link">News</a></li>
+                <li class="nav-item"><a href="#u2p_sim_news" class="text-reset nav-link">News</a></li>
                 <li class="nav-item"><a href="#contact" class="text-reset nav-link">Contact</a></li>
             </ul>
            
@@ -49,7 +51,7 @@
     </nav>
 
     <!-- hero section -->
-    <section id="home" class="d-flex justify-content-start align-items-center">
+    <section id="simulator_main" class="d-flex justify-content-start align-items-center">
         <div class="m-5 p-3">
             <div class="hidden main_slow_hiden">
                 <a href="news.html"><button type="button" id="event">U2P Simulator coming soon. Learn more…</button></a>
@@ -57,27 +59,189 @@
             
 
             <!-- 3d animation -->
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.507/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/FVuvWWlPn0qgptAT/scene.splinecode" id="home_3d"></spline-viewer>
-            <img src="assets/images/ClonerCubesGenerative.png" id="home_2d">
+            <div style="background-color: black; position:absolute; bottom:0; right: 0; height: 60px; width: 160px; z-index:99"></div>
+            <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.523/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/4RECZJVuj2HKiuT4/scene.splinecode" id="simulator_3d"></spline-viewer> -->
+            <!-- <img src="assets/images/ClonerCubesGenerative.png" id="home_2d"> -->
 
             <div class="hidden main_slow_hiden">
-                <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax">Making people's<br>lives </h1>
-                    <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="change_word" style="font-weight: 900; font-size: 5vmax"></h1>
+                <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax">A game that <br>changes your thinking</h1>
                 
 
                 <br>
 
                 <div class="d-inline-flex">
                     
-                        <a href="#projects"><button
-                    class="btn btn-light p-10 our_projects_btn our_projects_btn_fill" >Our
-                        Projects</button></a>
+                        <a href="https://github.com/cardboardchik/U2P_Simulator"><button
+                    class="btn btn-light p-10 our_projects_btn our_projects_btn_fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github text-white" viewBox="0 0 18 18">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>
+                    Project on Github</button></a>
                 </div>
                 
             </div>
         </div>
     </section>
+
+
+    <!-- u2p simulator news -->
+    <section class="p-5 m-5 hidden" id="u2p_sim_news">
+        <h1 class="text-white fw-bold text-center"><span class="border-bottom border-danger border-5">Last U2P Simulator News</span></h1>
+        <div class="row news ">
+            <div class="d-flex col-12 col-md-4 p-3 ">
+                <a href="#" class="no-text-decoration p-3 rounded-3 news_card" data-bs-toggle="modal" data-bs-target="#news3"> 
+                    <img class="w-100" src="assets/images/news_3.png" alt="U2P Simulator beta test coming soon!">
+                    <div class="text_news"><p class="fw-bold text-white fs-5 main_text">
+                        U2P Simulator beta test coming soon!
+                        </p>
+                        <p class="fs-6 author_name">20 November 2023 by Artur</p>
+                    </div>
+                </a>
+            </div>
+            <div class="d-flex col-12 col-md-4 p-3">
+                <a href="#" class="no-text-decoration p-3 rounded-3 news_card" data-bs-toggle="modal" data-bs-target="#news2">
+                    <img class="w-100" src="assets/images/Frame 904.png" alt="Improved U2P Simulator interface!">
+                    <div class="text_news"><p class="fw-bold text-white fs-5 main_text">
+                        Improved U2P Simulator interface!
+                        </p>
+                        <p class="fs-6 author_name">30 August 2023 by Artur</p>
+                    </div>
+                </a>
+            </div>
+            <div class="d-flex col-12 col-md-4 p-3">
+                <a href="#" class="no-text-decoration p-3 rounded-3 news_card" data-bs-toggle="modal" data-bs-target="#news1">
+                    <img class="w-100" src="assets/images/u2p_sim_logo_white.png" alt="The first MVP of U2P Simulator has been created!">
+                    <div class="text_news"><p class="fw-bold text-white fs-5 main_text">
+                        The first MVP of U2P Simulator has been created!
+                        </p>
+                        <p class="fs-6 author_name">10 August 2023 by Artur</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- news dialogs -->
+    <!-- news 3 -->
+    <div class="modal fade " id="news3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class=" modal-dialog modal-dialog-centered ">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="exampleModalLabel">U2P Simulator beta test coming soon!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-right: 0; filter: invert(1)"></button>
+            </div>
+            <div class="modal-body">
+                <img class="w-100 pb-2" src="assets/images/news_3.png" alt="U2P Simulator beta test coming soon!">
+                <p>The U2P Simulator project is now approximately 40% complete, and I'm thrilled to share the latest updates as of today:</p>
+                <img class="w-100 pb-2" src="assets\images\news_3\saved_games_news3.png" alt="Game Saves">
+                <p>1. <b>Game Saves:</b> You can now save all your unfinished games and continue them at your convenience. For completed games, you'll have the option to view results for each period, allowing for a more detailed analysis of your progress.</p>
+                <img class="w-100 pb-2" src="assets\images\news_3\new_game_news3.png" alt="Game Scenarios">
+                <p>2. <b>Game Scenarios:</b> The ability to select scenarios (crisis, favorable conditions, military actions, and more) or create your own with flexible simulation parameter settings opens up wide-ranging possibilities for experimentation and immersion in various gaming contexts.</p>
+                <img class="w-100 pb-2" src="assets\images\news_3\u2psim_news3.png" alt="Updated Main Menu and Interface">
+                <p>3. <b>Updated Main Menu and Interface:</b> Upon entering the game, you'll encounter a new main menu offering the choice to create a new game, load previous saves, or access interface settings. Interface settings allow language and theme customization. Future plans involve expanding these settings to accommodate diverse user preferences.</p>
+                <img class="w-100 pb-2" src="assets\images\news_3\u2psim2_news3.png" alt="Updated settings Interface">
+                <img class="w-100 pb-2" src="assets\images\news_3\u2psim3_news3.png" alt="Updated settings Interface">
+                <img class="w-100 pb-2" src="assets\images\news_3\u2psim4_news3.png" alt="Updated settings Interface">
+                <p>Your feedback, suggestions, and ideas for further enhancing the game are crucial to me.</p>
+
+                You can find the U2P Simulator project on GitHub at the following link:
+
+                <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank">github.com/cardboardchik/U2P_Simulator</a>          
+            </div>
+            <div class="modal-footer">
+                <p class="fs-6 author_name fst-italic" style="position:absolute; left: 10px;">10 August 2023 by Artur</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- news 2 -->
+    <div class="modal fade " id="news2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class=" modal-dialog modal-dialog-centered ">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="exampleModalLabel">Improved U2P Simulator interface!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-right: 0; filter: invert(1)"></button>
+            </div>
+            <div class="modal-body">
+                <img class="w-100 pb-2" src="assets/images/Frame 904.png" alt="U2P Simulator beta test coming soon!">
+                <p>Redesign of the U2P Simulator interface. The interface has become more understandable and convenient. Currently the following sections have been revised:
+                    <ul>
+                        <li>Main game window;</li>
+                        <li>Window for entering decisions for the company;</li>
+                        <li>Report print window;</li>
+                        <li>Period simulation parameters window;</li>
+                        <li>Company selection window for entering decisions;</li>
+                        <li>Several minor changes;</li>
+                    </ul></p>
+                <img class="w-100 pb-2" src="assets\images\news_2\main_news2.png" alt="Main game window">
+                <img class="w-100 pb-2" src="assets\images\news_2\Frame_Enter_Decisions_for_company_news2.png" alt="Window for entering decisions for the company">
+                <img class="w-100 pb-2" src="assets\images\news_2\Frame_print_news2.png" alt="Report print window">
+                <img class="w-100 pb-2" src="assets\images\news_2\Frame_set_Parameters_news2.png" alt="Period simulation parameters window">
+                <img class="w-100 pb-2" src="assets\images\news_2\Frame_enter_decisions_select_company_news2.png" alt="Company selection window for entering decisions">
+                <p>Your feedback, suggestions, and ideas for further enhancing the game are crucial to me.</p>
+
+                You can find the U2P Simulator project on GitHub at the following link:
+
+                <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank">github.com/cardboardchik/U2P_Simulator</a>          
+            </div>
+            <div class="modal-footer">
+                <p class="fs-6 author_name fst-italic" style="position:absolute; left: 10px;">10 August 2023 by Artur</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- news 1 -->
+    <div class="modal fade " id="news1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class=" modal-dialog modal-dialog-centered ">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="exampleModalLabel">The first MVP of U2P Simulator has been created!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-right: 0; filter: invert(1)"></button>
+            </div>
+            <div class="modal-body">
+                <img class="w-100 pb-2" src="assets/images/u2p_sim_logo_white.png" alt="U2P Simulator logo">
+                <p>U2P can be called an adaptation of MESE for modern operating systems, they are based on similar mathematical models, but there are some changes. U2P was created by karton4ik as a replacement for Junior Achievement's MESE</p>
+                <h3>About MESE or Management and Economic Simulator Exercise</h3>
+                <p>Mese is a management and economic modeling exercise. It is a computer program in which groups of players make decisions about the production and marketing of an imaginary product. During the simulation, players determine prices, production, marketing budgets, capital expenditures, and research and development (R&D) expenditures. The most successful teams will be those that best balance supply and demand, with the highest level of production and price. The program is designed to help students develop skills such as decision-making and teamwork, among other things.</p>
+
+                <p> MESE was created in the 1980s. It was widely used by JA (Junior Achievement) in its course JA Economics to teach students knowledge of company management and economic environment. There is also a web-based MESE variant called JA Titan. Unfortunately, the use of MESE / JA Titan was discontinued in 2013.</p>
+                    
+                <h3>Difference between U2P and MESE</h3>
+                <p><ul>
+                    <li>Support for modern OC;</li>
+                    <li>Game modes. Now the moderator does not have to configure the situation manually, he can select one of the suggested modes. Of course, it will still be possible to set up as in the old version, in the advanced settings section;</li>
+                    <li>More detailed graphs. The MESE lacked the ability to compare companies with each other, and there was also no choice of period range. In U2P, these features are present;</li>
+                    <li>Saving past games. It is now possible to save unfinished games, and continue them later.;</li>
+                    <li>Minor changes to the main window. Firstly, the display of the first three commands by number of MPI was added. Second, the Graph button has "moved" to a separate section, as it is now independent of the game period. And a few more minor changes;</li>
+                    <li>Adding languages other than English. The process of adding Russian is currently underway;</li>
+                </ul></p>
+
+                <p>Mese</p>
+                <img class="w-100 pb-2" src="assets\images\news_1\mese_news1.png" alt="MESE">
+                <p>U2P</p>
+                <img class="w-100 pb-2" src="assets\images\news_1\u2p_news1.png" alt="U2P">
+
+                <p>Your feedback, suggestions, and ideas for further enhancing the game are crucial to me.</p>
+
+                You can find the U2P Simulator project on GitHub at the following link:
+
+                <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank">github.com/cardboardchik/U2P_Simulator</a>          
+            </div>
+            <div class="modal-footer">
+                <p class="fs-6 author_name fst-italic" style="position:absolute; left: 10px;">10 August 2023 by Artur</p>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
 
     <!-- features -->
     <section class="" id="features">
@@ -93,8 +257,8 @@
                         class="btn btn btn-light read_button">Read</a>
                 </div>
             </div>
-            <div class="features_cart hidden">
-                <div class="features_content">
+            <div class="features_cart hidden" id="u2p_sim_feat_cart">
+                <div class="features_content" >
                     <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px"><i
                             data-feather="monitor" class="text-white"></i></div>
                     <h4 class="text-white fw-600 fs-3 mb-3">Desktop Applications</h4>
@@ -118,6 +282,7 @@
             </div>
         </div>
     </section>
+
 
 
     <!-- big text -->

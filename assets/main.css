@@ -26,7 +26,7 @@ html, body{
 }
 
 .features_content{
-    padding: 75px 30px 0 30px;
+    padding: 30px;
 }
 .features_cart:nth-child(2){
     transition-delay: 0.5s;
@@ -69,6 +69,7 @@ html, body{
     background-color: rgba(255, 255, 255, 0.1);
     margin-top: 20px;
     padding: 8px 28px;
+    margin-bottom: 30px;
 }
 
 .read_button:hover {
@@ -568,3 +569,36 @@ a:hover{
 }
 
 
+
+/* u2p simulator */
+.back_to_main {
+    padding: 10px 0px 10px 4vw;
+}
+.back_to_main img{
+    width: 60px;
+}
+#simulator_main {
+    position: relative;
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden;
+    background-color: #000;
+    z-index: 0;
+
+
+}
+
+#simulator_3d {
+    position:absolute;
+    
+    left: 0;
+    top: 0;
+    z-index: -1;
+    
+}
+
+#u2p_sim_feat_cart{
+   
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(247,147,30,0.5) 0%, rgba(237,28,36,1) 100%);
+}
