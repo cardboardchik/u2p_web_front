@@ -13,7 +13,7 @@
 </head>
 
 <body class="">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 20px 50px 20px 2.5vmax;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 20px 50px 20px 2.5vmax; background-color:black;">
     <div class="container-fluid">
         <a href="index.html" class="navbar-brand">
             <img class="logo" src="assets/images/u2p_logo_white.svg">
@@ -24,53 +24,37 @@
            
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3" style="margin-right: 10px;">
-                <li class="nav-item"><a href="index.html" class="nav-link" id="current_page" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item">
-                    <div class="dropdown">
-                        <a href="#projects" class="text-reset nav-link" id="projects_dropdown_m">Projects <i class="fa fa-caret-down"></i></a>
-                        <div class="dropdown_content">
-                            <a href="simulator.html"><img src="assets/images/u2p_sim_logo_black.png" alt="U2P Simulator" id="u2p_nav_prod_logo">U2P Simulator</a>
-                            <a href="https://schoolshp.kz/" target="_blank"><img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" class="w-100">School of Entrepreneurs</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="about.html" class="text-reset nav-link">About</a></li>
-                <li class="nav-item"><a href="news.html" class="text-reset nav-link">News</a></li>
-                <li class="nav-item"><a href="#contact" class="text-reset nav-link">Contact</a></li>
+                <li class="nav-item"><a href="index.html" class="text-reset nav-link">Home</a></li>
+               
+                <li class="nav-item"><a class="nav-link" id="current_page" onclick="wd_was_clicked()">Web Development</a></li>
+                <li class="nav-item"><a class="text-reset nav-link " id="da" onclick="da_was_clicked()">Desktop Applications</a></li>
+                <li class="nav-item"><a class="text-reset nav-link" id="cv" onclick="cv_was_clicked()">Computer Vision</a></li>
             </ul>
            
-            <a href="login.html" style="display:contents;" id="reg_link"><button class="btn btn-light mx-3" id="reg">
-                Log in | Sign up
-            </button></a>
             
         </div>
     </div>
     </nav>
 
     <!-- hero section -->
-    <section id="home" class="d-flex justify-content-start align-items-center">
+    <section id="home_dev" class="d-flex justify-content-start align-items-center">
         <div class="m-5 p-3">
-            <div class="hidden main_slow_hiden">
-                <a href="news.html"><button type="button" id="event">U2P Simulator coming soon. Learn more…</button></a>
-            </div>
+            
             
 
             <!-- 3d animation -->
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.507/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/FVuvWWlPn0qgptAT/scene.splinecode" id="home_3d"></spline-viewer>
-            <img src="assets/images/ClonerCubesGenerative.png" id="home_2d">
+            <div style="background-color: black; position:absolute; bottom:0; right: 0; height: 60px; width: 160px; z-index:99"></div>
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.523/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/5zVkFaACnTJ55gJJ/scene.splinecode" id="simulator_3d"></spline-viewer>
+            <img src="assets\images\Biblically accurate _O_ - Copy@3-360x740.png" id="home_2d">
 
             <div class="hidden main_slow_hiden">
-                <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax">Making people's<br>lives </h1>
-                    <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="change_word" style="font-weight: 900; font-size: 5vmax"></h1>
-                
-
+                <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax">Web<br>Development</h1>
                 <br>
 
                 <div class="d-inline-flex">
                     
-                        <a href="#projects"><button
+                        <a href="#projects_dev"><button
                     class="btn btn-light p-10 our_projects_btn our_projects_btn_fill" >Our
                         Projects</button></a>
                 </div>
@@ -82,66 +66,69 @@
     <!-- features -->
     <section class="" id="features">
         <div class="d-flex flex-column flex-md-row mx-auto">
-            <div class="features_cart hidden">
+            <div class="features_cart hidden features_cart_dev" id="current_features" onclick="wd_was_clicked()">
                 <div class="features_content">
                     <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
                         <i data-feather="code" class="text-white"></i>
                     </div>
-                    <h4 class="text-white fw-600 fs-3 mb-3">Web Development</h4>
+                    <h4 class="fw-600 fs-3 mb-3">Web Development</h4>
                     <div class="indigo-lightest fs-5 lh-3">We craft modern websites, from simple pages to complex online platforms. Our team uses the latest technologies to bring your ideas to life.</div>
-                    <a href="#"
-                        class="btn btn btn-light read_button" onclick="home_wd_was_clicked()">Read</a>
                 </div>
             </div>
-            <div class="features_cart hidden">
+            <div class="features_cart hidden features_cart_dev" id="da_f" onclick="da_was_clicked()">
                 <div class="features_content">
                     <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px"><i
                             data-feather="monitor" class="text-white"></i></div>
-                    <h4 class="text-white fw-600 fs-3 mb-3">Desktop Applications</h4>
+                    <h4 class="fw-600 fs-3 mb-3">Desktop Applications</h4>
                     <div class="indigo-lightest fs-5 lh-3">Developing applications for your computer, ensuring convenience and functionality. Reliable solutions for your business or personal use.</div>
-                    <a href="#"
-                        class="btn btn btn-light read_button" onclick="home_da_was_clicked()">Read</a>
                 </div>
             </div>
-            <div class="features_cart hidden">
+            <div class="features_cart hidden features_cart_dev" id="cv_f" onclick="cv_was_clicked()">
                 <div class="features_content">
                     <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px"><i
                             data-feather="eye" class="text-white"></i></div>
-                    <h4 class="text-white fw-600 fs-3 mb-3">Computer Vision</h4>
-                    <div class="indigo-lightest fs-5 lh-3">Implementing advanced computer vision techniques to enable machines to interpret and understand the visual world.
-
-                </div>
-                    
-                    <a href="#"
-                        class="btn btn btn-light read_button" onclick="home_cv_was_clicked()">Read</a>
+                    <h4 class="fw-600 fs-3 mb-3">Computer Vision</h4>
+                    <div class="indigo-lightest fs-5 lh-3">Implementing advanced computer vision techniques to enable machines to interpret and understand the visual world.</div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- big text -->
-    <section class="big_text_section hidden">
+    <section class="dev_about hidden" id="dev_about">
         <div>
-            <h2>
-                Crafting products that <span class="border-bottom border-danger border-5">revolutionize and enhance</span> the world we live in</h2>
+           <ul>
+            <li><span class="border-bottom border-danger border-5">Crafting Versatile Websites:</span> 
+                <p>We specialize in crafting versatile and dynamic websites tailored to meet the diverse needs of our clients. Whether you seek a minimalist single-page layout or a comprehensive, multifunctional online platform, our team is equipped to bring your vision to life.</p>
+            </li>
+            <li><span class="border-bottom border-danger border-5">Custom Solutions for Every Need: </span> 
+                <p>Our approach involves understanding your specific requirements and customizing solutions accordingly. From responsive design for optimal viewing across devices to robust backend architecture, we ensure that your website not only looks impressive but functions seamlessly.</p>
+            </li>
+            <li><span class="border-bottom border-danger border-5">Cutting-edge Technologies and Techniques: </span> 
+                <p>At our core, we harness the power of the latest technologies and industry best practices. Our team is proficient in utilizing a variety of tools, frameworks, and coding languages to create websites that are both visually appealing and technically sound.</p>
+            </li>
+            <li><span class="border-bottom border-danger border-5">Collaborative Development Process: </span> 
+                <p>We believe in collaboration and involve our clients in every stage of development. Your inputs and ideas are crucial in shaping the final product, and we work closely with you to ensure that the end result aligns perfectly with your vision.</p>
+            </li>
+            <li><span class="border-bottom border-danger border-5">Emphasis on User Experience: </span> 
+                <p>User experience is paramount in our development process. We focus on intuitive navigation, engaging interfaces, and fast-loading pages to provide visitors with a seamless and enjoyable browsing experience.</p>
+            </li>
+            <li><span class="border-bottom border-danger border-5">Scalable and Future-ready Solutions: </span> 
+                <p>Our websites are designed with scalability in mind. As your business grows, your website can easily evolve to accommodate increased traffic, new features, and changing demands without compromising performance.</p>
+            </li>
+            <li><span class="border-bottom border-danger border-5">Comprehensive Support and Maintenance: </span> 
+                <p>Our commitment doesn't end at the website launch. We offer ongoing support and maintenance services to ensure that your website continues to operate efficiently and stays up-to-date with evolving technologies and security standards.</p>
+            </li>
+           </ul>
         </div>
+        
     </section>
 
+
+
     <!-- product options -->
-    <section class="py-5" id="projects">
+    <section class="py-5" id="projects_dev">
         <div class="container">
             <div class="row">
-                <div class="d-flex col-md-6 product_option hidden">
-                    <div class="p-3 m-2 rounded bg_white_black">
-                        <img src="assets/images/u2p_sim_logo_white.png" alt="U2P Simulator" class="u2p_product_logo">
-                        <div class="text-white fw-bold fs-6">Competitive Simulator of Economics and Management (CSEM).</div>
-                        <p class="indigo-lightest fw-600">
-                            CSEM, an economic simulation, aids both university and school students. Through management simulations, learners grasp enterprise operations and align theoretical knowledge with practical experimentation. This fosters systemic thinking, interdisciplinary diagnosis, and strategic cognition.
-                        </p>
-                        <a href="simulator.html" class="btn btn-dark text-white read_button product_option_btn">Read</a>
-                    </div>
-                </div>
                 <div class="d-flex col-md-6 product_option hidden">
                     <div class="p-3 m-2 bg-light rounded">
                         <img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" class="shp_product_logo">
@@ -149,11 +136,21 @@
                         <p class="indigo-lightest fw-600" style="color: black;">
                             The site contains many sections, including electronic textbooks, 3D tours, and much more. Students can access schedules, current updates, and specific pages dedicated to school organizations (clubs).
                         </p>
-                        <a href="https://schoolshp.kz/" target="_blank" class="btn btn-dark text-white read_button product_option_btn">Read</a>
+                        <a href="https://schoolshp.kz/" target="_blank" class="btn btn-dark text-white read_button product_option_btn">Look</a>
+                    </div>
+                </div>
+                <div class="d-flex col-md-6 product_option hidden">
+                    <div class="p-3 m-2 rounded bg_white_black">
+                        <img src="assets\\images\\u2p_sim_web_white.svg" alt="U2P Simulator" class="u2p_product_logo">
+                        <div class="text-white fw-bold fs-6">Competitive Simulator of Economics and Management (CSEM) WEB Version!</div>
+                        <p class="indigo-lightest fw-600">
+                            CSEM, an economic simulation, aids both university and school students. Through management simulations, learners grasp enterprise operations and align theoretical knowledge with practical experimentation. This fosters systemic thinking, interdisciplinary diagnosis, and strategic cognition.
+                        </p>
+                        <a class="btn btn-dark text-white-50 read_button product_option_btn">Soon</a>
                     </div>
                 </div>
             </div>
-        </div>
+           </div>
     </section>
     
 

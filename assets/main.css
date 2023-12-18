@@ -143,6 +143,7 @@ nav {
 a:link, a:visited {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 a:hover{
     transition: 0.5s;
@@ -246,18 +247,11 @@ a:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    top:-30px;
+    top: 0;
+    left: 0;
     z-index: -1;
-    margin-left: -50px;
     
-}
-#home_2d {display: none;}
-@media (max-width: 640px) {
-    #home_2d { display: block }
-    #home_3d { display: none }
-    .main_slow_hiden, #event{
-        transition-delay: 0s;
-    }
+    
 }
 
 .our_projects_btn{
@@ -594,7 +588,15 @@ a:hover{
     left: 0;
     top: 0;
     z-index: -1;
-    
+}
+
+#home_2d, #home_sim_2d {display: none;}
+@media (max-width: 640px) {
+    #home_2d, #home_sim_2d { display: block }
+    #home_3d, #simulator_3d { display: none }
+    .main_slow_hiden, #event{
+        transition-delay: 0s;
+    }
 }
 
 #u2p_sim_feat_cart{
@@ -619,7 +621,7 @@ a:hover{
     color: #fff;
     padding: 10vh 10vw 10vh 7vw;
 }
-.u2p_sim_sys_req table, .u2p_sim_sys_req table td{
+.u2p_sim_sys_req table, .u2p_sim_sys_req table td, .u2p_sim_sys_req table th{
     margin: auto;
     padding: 10px;
     border: solid 1px;
@@ -636,4 +638,47 @@ a:hover{
 .footer_logo_u2p_sim{
     padding-bottom: 25px;
     width: 110px;
+}
+
+
+/* dev */
+#home_dev {
+    position: relative;
+    width: 100%; 
+    height: 100vh; 
+    overflow: hidden;
+    background-color: #000;
+    z-index: 0;
+}
+
+.features_cart_dev{
+    color: #fff;
+
+}
+
+#current_features {
+    border-radius: 15px;
+    color: #000;
+    background-color: #fff;
+}
+#current_features div, #current_features h4{
+    color: #000;
+   
+}
+
+
+.dev_about{
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #000;
+    color: #fff;
+    padding: 10vh 10vw 10vh 7vw;
+}
+
+.dev_about p{
+    opacity: 0.75;
+}
+
+.nav-link{
+    cursor: pointer;
 }

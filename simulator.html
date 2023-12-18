@@ -15,7 +15,7 @@
 <body class="">
     <div class="bg-black back_to_main" >
         
-        <a href="simulator.html" class="">
+        <a href="index.html" class="">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-left" viewBox="0 1 16 16">
                 <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
             </svg>
@@ -26,7 +26,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 20px 50px 20px 2.5vmax;">
     <div class="container-fluid">
-        <a href="index.html" class="navbar-brand">
+        <a href="simulator.html" class="navbar-brand">
             <img class="logo" src="assets\images\u2p_sim_logo_white.png">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,10 +57,10 @@
             <div style="background-color: black; position:absolute; bottom:0; right: 0; height: 60px; width: 160px; z-index:99"></div>
             <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.523/build/spline-viewer.js"></script>
             <spline-viewer url="https://prod.spline.design/4RECZJVuj2HKiuT4/scene.splinecode" id="simulator_3d"></spline-viewer>
-            <!-- <img src="assets/images/ClonerCubesGenerative.png" id="home_2d"> -->
+            
 
             <div class="hidden main_slow_hiden">
-                <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax">A game that <br>changes your thinking</h1>
+                <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax; ">A game that <br>changes your thinking</h1>
                 
 
                 <br>
@@ -79,6 +79,7 @@
         </div>
     </section>
 
+    <img src="assets\images\Webbee_websitespline model - Copy@3-428x926.png" id="home_sim_2d" style="width: 100%; height: 100%;">
 
     <!-- u2p simulator news -->
     <section class="p-5 m-5 hidden" id="u2p_sim_news">
@@ -249,7 +250,7 @@
                     <h4 class="text-white fw-600 fs-3 mb-3">Web Development</h4>
                     <div class="indigo-lightest fs-5 lh-3">We craft modern websites, from simple pages to complex online platforms. Our team uses the latest technologies to bring your ideas to life.</div>
                     <a href="#"
-                        class="btn btn btn-light read_button">Read</a>
+                        class="btn btn btn-light read_button" onclick="home_wd_was_clicked()">Read</a>
                 </div>
             </div>
             <div class="features_cart hidden" id="u2p_sim_feat_cart">
@@ -259,7 +260,7 @@
                     <h4 class="text-white fw-600 fs-3 mb-3">Desktop Applications</h4>
                     <div class="indigo-lightest fs-5 lh-3">Developing applications for your computer, ensuring convenience and functionality. Reliable solutions for your business or personal use.</div>
                     <a href="#"
-                        class="btn btn btn-light read_button">Read</a>
+                        class="btn btn btn-light read_button" onclick="home_da_was_clicked()">Read</a>
                 </div>
             </div>
             <div class="features_cart hidden">
@@ -272,7 +273,7 @@
                 </div>
                     
                     <a href="#"
-                        class="btn btn btn-light read_button">Read</a>
+                        class="btn btn btn-light read_button" onclick="home_cv_was_clicked()">Read</a>
                 </div>
             </div>
         </div>
