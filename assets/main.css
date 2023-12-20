@@ -20,7 +20,21 @@ html, body{
 }
 
 
+.bi{
+    font-size: 1.8rem;
+    color: white;
+}
 
+.bi-arrow-up-short{
+    font-size: 2.1rem;
+}
+.bi-caret-down-fill{
+    font-size: 0.8rem;
+}
+.bi-download{
+    font-size: 1.1rem;
+    color: #1E1E1E;
+}
 .fw-600{
     font-weight: 600;
 }
