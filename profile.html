@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" id="profile">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2P - Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css" href="assets/main.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/page_icon.svg">
+</head>
+
+<body>
+
+    <a href="index.html" class="logo_log_in">
+        <img class="logo" src="assets/images/u2p_logo_white.svg">
+    </a>
+
+    <nav class="log_reg_nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            
+        </ul>
+    </nav>
+
+    <div style="background-color: black; position:fixed; bottom:0; right: 0; height: 100px; width: 200px; z-index:99"></div>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.519/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/zIx49QufRL2-4fmP/scene.splinecode" style="position: fixed; top:0; left:0; z-index: 1;"></spline-viewer>
+
+    
+    <div class="container rounded profile">
+        <div class="row">
+            <div class="col-md-3 border-right align-self-center pb-5 mb-5">
+                <div class="d-flex flex-column align-items-center  text-center p-3 py-5"><svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+                  </svg>
+                        <span class="font-weight-bold" id="profile_name">Edogaru</span>
+                        <span class="text-white-50" id="profile_email">edogaru@mail.com.my</span><span> </span>
+                <button class="btn btn-outline-danger logout_btn mt-3" id="logout_btn" onclick="log_out()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 1 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                    </svg>
+                    Log Out</button>
+            </div>
+                
+            </div>
+            
+            <div class="col-md-9 border-right">
+                <div class="p-3 py-4">
+
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <h4 class="">Profile Settings</h4>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="InputFirstname" class="form-label">Firstname</label>
+                            <input type="text" class="form-control" id="InputFirstname" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="InputLastname" class="form-label">Lastname</label>
+                            <input type="text" class="form-control" id="InputLastname">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                        <div class="col-md-12">
+                            <label for="InputDateofBirth" class="form-label">Date of Birth</label>
+                            <input type="date" class="form-control" id="InputDateofBirth" disabled>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="InputCityBirth" class="form-label">City birth</label>
+                            <input type="text" class="form-control" id="InputCityBirth">
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="InputRegion" class="form-label">Region</label>
+                            <input type="text" class="form-control" id="InputRegion" required>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <label for="InputCountry" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="InputCountry" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="InputHomeAddress" class="form-label">Home-address</label>
+                            <input type="text" class="form-control" id="InputHomeAddress">
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="InputPhoneNumber" class="form-label">Phone number</label>
+                            <input type="tel" class="form-control" id="InputPhoneNumber"
+                                pattern="[+][0-9]{1,3}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="+77071233223"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label for="InputPassword" class="form-label">Password
+                                <label id="show_hide_psw"><i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-eye" viewBox="0 1 18 18">
+                                            <path
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                            <path
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                                        </svg>
+                                    </i>
+                                    Show
+                                </label>
+                            </label>
+                            <input type="password" minlength="8" class="form-control" id="InputPassword"
+                                onkeyup="check()" required>
+                        </div>
+                        <div class="col-md-6"><label for="InputConfirmPassword" class="form-label">Confirm
+                                password</label>
+                            <input type="password" minlength="8" class="form-control" id="InputConfirmPassword"
+                                onkeyup="check()" required>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile_button" type="button">Save
+                            Profile</button></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

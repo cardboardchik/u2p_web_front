@@ -4,72 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U2P - News</title>
-    
+    <title>U2P Simulator</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
     <link rel="stylesheet" type="text/css" href="assets/main.css"/>
+
     <link rel="icon" type="image/x-icon" href="assets/images/page_icon.svg">
 
     <link href="assets/preloader.css" rel="stylesheet">
 </head>
 
-<body class="bg-black muli">
+<body class="">
+
 
     <div id="loader-wrapper">
         <div id="loader"></div>
-        <div class="loader-section section-left"><img class="logo" src="assets/images/u2p_logo_white.svg" style="margin: 30px;"></div>
+        <div class="loader-section section-left"><img class="logo" src="assets\images\u2p_sim_logo_white.png" style="margin: 30px;"></div>
         <div class="loader-section section-right"></div>
     </div>
 
+    <div class="bg-black back_to_main" >
+        
+        <a href="index.html" class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-left" viewBox="0 1 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+            
+            Back to U2P
+            <img src="assets/images/u2p_logo_white.svg" style="margin-left: 10px;">
+        </a>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 20px 50px 20px 2.5vmax;">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
-                <img class="logo" src="assets/images/u2p_logo_white.svg">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-               
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3" style="margin-right: 10px;">
-                    <li class="nav-item"><a href="index.html" class="text-reset nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <a href="index.html#projects" class="text-reset nav-link" id="projects_dropdown_m">Projects <i class="bi bi-caret-down-fill"></i></a>
-                            <div class="dropdown_content">
-                                <a href="simulator.html"><img src="assets/images/u2p_sim_logo_black.png" alt="U2P Simulator" id="u2p_nav_prod_logo">U2P Simulator</a>
-                                <a href="https://schoolshp.kz/" target="_blank"><img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" class="w-100">School of Entrepreneurs</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="about.html" class="text-reset nav-link">About</a></li>
-                    <li class="nav-item"><a href="news.html" class="nav-link" id="current_page">News</a></li>
-                    <li class="nav-item"><a href="index.html#contact" class="text-reset nav-link">Contact</a></li>
-                </ul>
-               
-                <a href="login.html" style="display:contents;" id="reg_link"><button class="btn btn-light mx-3" id="reg">
-                    Log in | Sign up
-                </button></a>
+    <div class="container-fluid">
+        <a href="simulator.html" class="navbar-brand">
+            <img class="logo" src="assets\images\u2p_sim_logo_white.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+           
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3" style="margin-right: 10px;">
+                <li class="nav-item"><a href="simulator.html" class="nav-link" id="current_page" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#u2p_sim_news" class="text-reset nav-link">News</a></li>
+                <li class="nav-item"><a href="#u2p_sim_about" class="text-reset nav-link">About</a></li>
+                <li class="nav-item"><a href="#u2p_sim_sys_req" class="text-reset nav-link">System requirements</a></li>
+                <li class="nav-item"><a href="#u2p_sim_download" class="text-reset nav-link">Download</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <!-- hero section -->
+    <section id="simulator_main" class="d-flex justify-content-start align-items-center">
+        <div class="m-5 p-3">
+            <div class="hidden main_slow_hiden">
+                <a href="news.html"><button type="button" id="event">U2P Simulator coming soon. Learn more…</button></a>
+            </div>
+            
+
+            <!-- 3d animation -->
+            <div style="background-color: black; position:absolute; bottom:0; right: 0; height: 60px; width: 160px; z-index:99"></div>
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.523/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/4RECZJVuj2HKiuT4/scene.splinecode" id="simulator_3d"></spline-viewer>
+            
+
+            <div class="hidden main_slow_hiden">
+                <h1 class="text-white lh-2 md-fs-xl1 md-lh-1 d-inline" id="text_c" style="font-weight: 900; font-size: 5vmax; ">A game that <br>changes your thinking</h1>
+                
+
+                <br>
+
+                <div class="d-inline-flex">
+                    
+                        <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank"><button
+                    class="btn btn-light p-10 our_projects_btn our_projects_btn_fill">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github text-white" viewBox="0 0 18 18">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>
+                    Project on Github</button></a>
+                </div>
                 
             </div>
         </div>
-    </nav>
+    </section>
 
-    
-    <div id="head_section_about">
-        <div id="blurrrr"></div>
-        <h1 id="head_news">News</h1>
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.510/build/spline-viewer.js"></script>
-        <spline-viewer url="https://prod.spline.design/PLiud2ds3Bt56apR/scene.splinecode" id="about_3d"></spline-viewer>
-    </div>
-    <div id="black_rectangle">
-    </div>
+    <img src="assets\images\Webbee_websitespline model - Copy@3-428x926.png" id="home_sim_2d" style="width: 100%; height: 100%;">
 
-    <section class="p-5 md-5">
-        <div class="row news">
+    <!-- u2p simulator news -->
+    <section class="p-5 m-5 hidden" id="u2p_sim_news">
+        <h1 class="text-white fw-bold text-center"><span class="border-bottom border-danger border-5">Last U2P Simulator News</span></h1>
+        <div class="row news ">
             <div class="d-flex col-12 col-md-4 p-3 ">
                 <a href="#" class="no-text-decoration p-3 rounded-3 news_card" data-bs-toggle="modal" data-bs-target="#news3"> 
                     <img class="w-100" src="assets/images/news_3.png" alt="U2P Simulator beta test coming soon!">
@@ -222,33 +248,155 @@
           </div>
         </div>
     </div>
+
+
+    <!-- features -->
+    <section class="" id="features">
+        <div class="d-flex flex-column flex-md-row mx-auto">
+            <div class="features_cart hidden">
+                <div class="features_content">
+                    <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+                    <h4 class="text-white fw-600 fs-3 mb-3">Web Development</h4>
+                    <div class="indigo-lightest fs-5 lh-3">We craft modern websites, from simple pages to complex online platforms. Our team uses the latest technologies to bring your ideas to life.</div>
+                    <a href="#"
+                        class="btn btn btn-light read_button" onclick="home_wd_was_clicked()">Read</a>
+                </div>
+            </div>
+            <div class="features_cart hidden" id="u2p_sim_feat_cart">
+                <div class="features_content" >
+                    <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h4 class="text-white fw-600 fs-3 mb-3">Desktop Applications</h4>
+                    <div class="indigo-lightest fs-5 lh-3">Developing applications for your computer, ensuring convenience and functionality. Reliable solutions for your business or personal use.</div>
+                    <a href="#"
+                        class="btn btn btn-light read_button" onclick="home_da_was_clicked()">Read</a>
+                </div>
+            </div>
+            <div class="features_cart hidden">
+                <div class="features_content">
+                    <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h4 class="text-white fw-600 fs-3 mb-3">Computer Vision</h4>
+                    <div class="indigo-lightest fs-5 lh-3">Implementing advanced computer vision techniques to enable machines to interpret and understand the visual world.
+
+                </div>
+                    
+                    <a href="#"
+                        class="btn btn btn-light read_button" onclick="home_cv_was_clicked()">Read</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- about -->
+    <section class="u2p_sim_about hidden" id="u2p_sim_about">
+        <h1 class="fw-bold"><span class="border-bottom border-danger border-5">About</span></h1><br>
+        <div>
+           <p>The U2P Simulator serves as a robust tool for simulating economic processes, proving highly effective as a didactic technique aimed at enhancing students' understanding. Its application in educational settings, spanning universities to schools, offers invaluable insights. Through these simulations, students gain a comprehensive grasp of plant operations while being empowered to juxtapose theoretical knowledge with experiential learning. This approach nurtures the development of crucial skills like systems thinking, interdisciplinary diagnostics, and strategic planning.</p>
+
+            <p>Furthermore, the U2P Simulator isn't merely an educational tool — it can be a competitive game. Participants strive to attain the highest UPI (U2P Performance Index), infusing a competitive edge into the learning process.</p>
+            <p>U2P Simulator can be called an adaptation of MESE for modern operating systems, they are based on similar mathematical models, but there are some changes. U2P Simulator was created by <a href="https://github.com/cardboardchik" target="_blank" style="text-decoration: underline;">karton4ik</a> as a replacement for Junior Achievement's MESE</p>
+            <p>MESE was created in the 1980s. It was widely used by JA (Junior Achievement) in its course JA Economics to teach students knowledge of company management and economic environment. There is also a web-based MESE variant called JA Titan. Unfortunately, the use of MESE / JA Titan was discontinued in 2013.</p>
+        </div>
+    </section>
+
+    <!-- system requirements -->
+    <section class="u2p_sim_sys_req hidden" id="u2p_sim_sys_req">
+        <h1 class="fw-bold text-center p-4"><span class="border-bottom border-danger border-5">System requirements for using U2P Simulator</span></h1>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <th>MINIMUM</th>
+                    <th>RECOMMENDED</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OS</td>
+                    <td>Requires a 64-bit processor and operating system</td>
+                    <td>Windows 10/11</td>
+                </tr>
+                <tr>
+                    <td>Processor</td>
+                    <td>The 4th generation Intel® Core™</td>
+                    <td>The 6th generation Intel® Core™ processor / AMD Ryzen™ series</td>
+                </tr>
+                <tr>
+                    <td>Memory</td>
+                    <td>1 GB RAM</td>
+                    <td>2 GB RAM</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>Minimum 1 GB disk space</td>
+                    <td>2 GB disk space</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-center">In reality, requirements may vary</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- download -->
+    <section class="hidden" id="u2p_sim_download" style="background-color: black; padding: 15vh 6vw 15vh 6vw;">
+        <div class="rounded bg_white_black p-4 md:p-5 d-flex flex-wrap justify-content-between align-items-center">
+            <div class="w-100 col-md-4">
+                <h2 class="text-white fs-4 fw-bold text-center">Download U2P Simulator</h2>
+                <p class="indigo-lightest fs-5 text-center">Coming soon</p>
+            </div>
+            <div class="w-100 col-md-6 mt-4 mt-md-0">
+                <div class="d-flex my-3">
+                    <a class="btn btn-light text-dark btn-lg fw-bold fs-5 flex-fill  download_btn" >
+                        <i class="bi bi bi-download"></i>
+                        <b>Download</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
     
     <!-- top-scroll-button -->
-    <button type="button" onclick="scrollTop1()" title="Go to Top" id="topBtn"><i class="bi bi-arrow-up-short"></i></button>
+    <button type="button" onclick="scrollTop1()" title="Go to Top" id="topBtn">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
 
-     <!-- footer -->
-     <footer class="p-5 bg_white_black">
+    <!-- footer -->
+    <footer class="p-5 bg_white_black">
         <div class="">
             <div class="row align-items-center">
                 <div class="col-md-3 mb-5 text-center ">
-                    <a href="index.html"><img src="assets/images/u2p_logo_white.svg" class="img-fluid " alt="u2p logo" id="footer_logo"></a>
+                    <a href="simulator.html"><img class="footer_logo_u2p_sim" src="assets\images\u2p_sim_logo_white.png"></a><br>
+                    <a href="index.html"><img src="assets/images/u2p_logo_white.svg" class="footer_logo_u2p_sim" alt="u2p logo"></a>
+                    
                 </div>
                 <div class="col">
                     <div class="row ">
                         <div class="col mb-5">
-                            <h5 class="text-white">Company</h5>
+                            <h5 class="text-white">U2P Simulator</h5>
                             <ul class="list-unstyled mt-3 p-0">
-                                <li><a href="index.html" class="indigo-lightest">Home</a></li>
-                                <li><a href="about.html" class="indigo-lightest">About</a></li>
-                                <li><a href="news.html" class="indigo-lightest">News</a></li>
-                                <li><a href="index.html#contact" class="indigo-lightest">Contact</a></li>
+                                <li><a href="simulator.html" class="indigo-lightest">Home</a></li>
+                                <li><a href="#u2p_sim_news" class="indigo-lightest">News</a></li>
+                                <li><a href="#u2p_sim_about" class="indigo-lightest">About</a></li>
+                                <li><a href="#u2p_sim_sys_req" class="indigo-lightest">System requirements</a></li>
                             </ul>
                         </div>
                         <div class="col mb-5">
-                            <h5 class="text-white">Products</h5>
+                            <h5 class="text-white">Download</h5>
                             <ul class="list-unstyled mt-3 p-0">
-                                <li><a href="simulator.html" class="indigo-lightest">U2P Simulator</a></li>
-                                <li><a href="https://schoolshp.kz/" target="_blank" class="indigo-lightest">School of Entrepreneurs</a></li>
+                                <li><a href="#u2p_sim_download" class="indigo-lightest">U2P Simulator</a></li>
+                                <li><a href="#" class="indigo-lightest">Guide</a></li>
                             </ul>
                         </div>
                         <div class="col mb-5">
@@ -262,21 +410,15 @@
                 <div class="col-md-3 ">
                     <div class="row text-center">
                         <div class="col mb-5 d-flex justify-content-center align-items-center">
-                            <a href="https://www.instagram.com/u2p.kz/" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle">
+                            <a href="https://www.instagram.com/u2p.sim/" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram text-dark" viewBox="0 0 16 16">
                                     <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                                   </svg>
                             </a>
                         </div>
+                        
                         <div class="col mb-5 d-flex justify-content-center align-items-center">
-                            <a href="https://twitter.com/Karton4ik2" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle" >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter-x text-dark" viewBox="0 0 16 16">
-                                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-                                  </svg>
-                            </a>
-                        </div>
-                        <div class="col mb-5 d-flex justify-content-center align-items-center">
-                            <a href="https://github.com/cardboardchik" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle" >
+                            <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github text-dark" viewBox="0 0 16 16">
                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                                   </svg>
@@ -287,8 +429,9 @@
             </div>
         </div>
     </footer>
-   
     
+   
+   
     </div>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

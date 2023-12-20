@@ -4,40 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U2P</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <title>U2P - About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
-    <link rel="stylesheet" type="text/css" href="/assets/main.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/main.css"/>
     <link rel="icon" type="image/x-icon" href="assets/images/page_icon.svg">
+
+    <link href="assets/preloader.css" rel="stylesheet">
 </head>
 
 <body class="bg-black muli">
-    <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5">
-        <div class="flex justify-between">
-            <a href="index.html" class="flex items-center p-2 mr-4 no-underline">
+
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"><img class="logo" src="assets/images/u2p_logo_white.svg" style="margin: 30px;"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="padding: 20px 50px 20px 2.5vmax;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
                 <img class="logo" src="assets/images/u2p_logo_white.svg">
             </a>
-            <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
-                class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
-                <i data-feather="menu"></i>
-            </a>
-        </div>
-        <div id="nav-items" class="hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
-            <b><a href="index.html" class="fs-s1 mx-3 py-3">Home</a>
-            <div class="dropdown">
-                <a href="index.html#projects" class="fs-s1 mx-3 py-3" id="projects_dropdown_m">Projects <i class="fa fa-caret-down"></i></a>
-                <div class="dropdown_content">
-                    <a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank"><img src="assets/images/u2p_sim_logo_black.png" alt="U2P Simulator" id="u2p_nav_prod_logo">U2P Simulator</a>
-                    <a href="https://schoolshp.kz/" target="_blank"><img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" id="shp_nav_prod_logo">School of Entrepreneurs</a>
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+               
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-3" style="margin-right: 10px;">
+                    <li class="nav-item"><a href="index.html" class="text-reset nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="index.html#projects" class="text-reset nav-link" id="projects_dropdown_m">Projects <i class="bi bi-caret-down-fill"></i></a>
+                            <div class="dropdown_content">
+                                <a href="simulator.html"><img src="assets/images/u2p_sim_logo_black.png" alt="U2P Simulator" id="u2p_nav_prod_logo">U2P Simulator</a>
+                                <a href="https://schoolshp.kz/" target="_blank"><img src="assets/images/shp_logo.png" alt="School of Entrepreneurs" class="w-100">School of Entrepreneurs</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" id="current_page" aria-current="page">About</a></li>
+                    <li class="nav-item"><a href="news.html" class="text-reset nav-link">News</a></li>
+                    <li class="nav-item"><a href="index.html#contact" class="text-reset nav-link">Contact</a></li>
+                </ul>
+               
+                <a href="login.html" style="display:contents;" id="reg_link"><button class="btn btn-light mx-3" id="reg">
+                    Log in | Sign up
+                </button></a>
+                
             </div>
-            <a href="about.html" class="fs-s1 mx-3 py-3" id="current_page">About</a>
-            <a href="news.html" class="fs-s1 mx-3 py-3 ">News</a>
-            <a href="index.html#contact" class="fs-s1 mx-3 py-3 ">Contact</a></b>
-            <!-- <a href="#" id="reg" class="">Register</a> -->
         </div>
     </nav>
+
     <div id="head_section_about">
         <div id="blurrrr"></div>
         <h1 id="head_about">About Us</h1>
@@ -48,111 +67,119 @@
     </div>
     
     <div class="paragraph_about">
-        <p>U2P is a company producing various IT products. Our mission is to create innovative and high-quality solutions for the development of education, business and society. We offer a wide range of services including web development, desktop applications, computer vision and support. Our team currently consists of only one person). We are committed to continuous improvement and meeting the needs of our customers. <span class="border-b bw-4" id="span_bc"> We are crafting products that revolutionize and enhance the world we live in.</span></p>
+        <p>U2P is a company producing various IT products. Our mission is to create innovative and high-quality solutions for the development of education, business and society. We offer a wide range of services including web development, desktop applications, computer vision and support. Our team currently consists of only one person). We are committed to continuous improvement and meeting the needs of our customers. <span class="border-bottom border-danger border-5"> We are crafting products that revolutionize and enhance the world we live in.</span></p>
     </div>
 
-    <section id="features" class="p-10 md-p-l5">
-        <div class="flex flex-column md-flex-row mx-auto">
-            <div class="w-100pc md-w-40pc">
-                <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="code" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Web Development</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">We craft modern websites, from simple pages to complex online platforms. Our team uses the latest technologies to bring your ideas to life.</div>
-                    <a href="#"
-                        class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
-                </div>
-            </div>
-            <div class="w-100pc md-w-40pc">
-                <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="monitor" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Desktop Applications</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Developing applications for your computer, ensuring convenience and functionality. Reliable solutions for your business or personal use.</div>
-                    <a href="#"
-                        class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
-                </div>
-            </div>
-            <div class="w-100pc md-w-40pc">
-                <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="eye" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Computer Vision</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Implementing advanced computer vision techniques to enable machines to interpret and understand the visual world.
-
+    <!-- features -->
+    <section class="" id="features">
+        <div class="d-flex flex-column flex-md-row mx-auto">
+            <div class="features_cart hidden">
+                <div class="features_content">
+                    <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
+                        <i class="bi bi-globe2"></i>
                     </div>
+                    <h4 class="text-white fw-600 fs-3 mb-3">Web Development</h4>
+                    <div class="indigo-lightest fs-5 lh-3">We craft modern websites, from simple pages to complex online platforms. Our team uses the latest technologies to bring your ideas to life.</div>
+                    <a href="#"
+                        class="btn btn btn-light read_button" onclick="home_wd_was_clicked()">Read</a>
+                </div>
+            </div>
+            <div class="features_cart hidden">
+                <div class="features_content">
+                    <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h4 class="text-white fw-600 fs-3 mb-3">Desktop Applications</h4>
+                    <div class="indigo-lightest fs-5 lh-3">Developing applications for your computer, ensuring convenience and functionality. Reliable solutions for your business or personal use.</div>
+                    <a href="#"
+                        class="btn btn btn-light read_button" onclick="home_da_was_clicked()">Read</a>
+                </div>
+            </div>
+            <div class="features_cart hidden">
+                <div class="features_content">
+                    <div class="d-flex mb-3 justify-content-center align-items-center rounded-circle bg_white_black" style="width: 80px; height: 80px">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h4 class="text-white fw-600 fs-3 mb-3">Computer Vision</h4>
+                    <div class="indigo-lightest fs-5 lh-3">Implementing advanced computer vision techniques to enable machines to interpret and understand the visual world.
+
+                </div>
                     
                     <a href="#"
-                        class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
+                        class="btn btn btn-light read_button" onclick="home_cv_was_clicked()">Read</a>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- top-scroll-button -->
-    <button type="button" onclick="scrollTop1()" title="Go to Top" id="topBtn"><i data-feather="arrow-up"></i></button>
+    <button type="button" onclick="scrollTop1()" title="Go to Top" id="topBtn"><i class="bi bi-arrow-up-short"></i></button>
 
     <!-- footer -->
-    <footer class="p-5 md-p-l5 bg-indigo-lightest-10">
-        <div class="flex flex-wrap" id="flex_div">
-            <div class="md-w-25pc mb-10">
-                <a href="index.html"><img src="assets/images/u2p_logo_white.svg" class="" alt="u2p logo" id="footer_logo">
-                </a>
-            </div>
-            <div class="w-100pc md-w-50pc">
-                <div class="flex justify-around">
-                    <div class="w-33pc md-px-10 mb-10">
-                        <h5 class="white">Company</h5>
-                        <ul class="list-none mt-5 fs-s2">
-                            <li class="my-3"><a href="index.html" class="white opacity-70 no-underline hover-underline">Home</a></li>
-                            <li class="my-3"><a href="about.html" class="white opacity-70 no-underline hover-underline">About</a>
-                            </li>
-                            <li class="my-3"><a href="news.html"
-                                    class="white opacity-70 no-underline hover-underline">News</a></li>
-                            <li class="my-3"><a href="index.html#contact" class="white opacity-70 no-underline hover-underline">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="w-33pc md-px-10 mb-10">
-                        <h5 class="white">Products</h5>
-                        <ul class="list-none mt-5 fs-s2">
-                            <li class="my-3"><a href="https://github.com/cardboardchik/U2P_Simulator" target="_blank" class="white opacity-70 no-underline hover-underline">U2P Simulator</a></li>
-                            <li class="my-3"><a href="https://schoolshp.kz/" target="_blank" class="white opacity-70 no-underline hover-underline">School of Entrepreneurs</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div class="w-33pc md-px-10 mb-10">
-                        <h5 class="white">Support</h5>
-                        <ul class="list-none mt-5 fs-s2">
-                            <li class="my-3"><a href="https://forms.gle/VvbXtHR3aADoNjmm6" target="_blank" class="white opacity-70 no-underline hover-underline">Contact Us</a></li>
-                            
-                            
-                        </ul>
+    <footer class="p-5 bg_white_black">
+        <div class="">
+            <div class="row align-items-center">
+                <div class="col-md-3 mb-5 text-center ">
+                    <a href="index.html"><img src="assets/images/u2p_logo_white.svg" class="img-fluid " alt="u2p logo" id="footer_logo"></a>
+                </div>
+                <div class="col">
+                    <div class="row ">
+                        <div class="col mb-5">
+                            <h5 class="text-white">Company</h5>
+                            <ul class="list-unstyled mt-3 p-0">
+                                <li><a href="index.html" class="indigo-lightest">Home</a></li>
+                                <li><a href="about.html" class="indigo-lightest">About</a></li>
+                                <li><a href="news.html" class="indigo-lightest">News</a></li>
+                                <li><a href="index.html#contact" class="indigo-lightest">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col mb-5">
+                            <h5 class="text-white">Products</h5>
+                            <ul class="list-unstyled mt-3 p-0">
+                                <li><a href="simulator.html" class="indigo-lightest">U2P Simulator</a></li>
+                                <li><a href="https://schoolshp.kz/" target="_blank" class="indigo-lightest">School of Entrepreneurs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col mb-5">
+                            <h5 class="text-white">Support</h5>
+                            <ul class="list-unstyled mt-3 p-0">
+                                <li><a href="https://forms.gle/VvbXtHR3aADoNjmm6" target="_blank" class="indigo-lightest">Contact Us</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="w-100pc md-w-25pc">
-                <div class="flex justify-around my-8">
-                    <a href="https://twitter.com/Karton4ik2" target="_blank" class="relative p-5 br-round black hover-scale-up-1 ease-400" id="social_n"><i
-                            data-feather="x" class="absolute-center h-4"></i></a>
-                    <!-- <a href="#" target="_blank" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
-                            data-feather="telegram" class="absolute-center h-4"></i></a> -->
-                    <a href="https://www.instagram.com/u2p.kz/" target="_blank" class="relative p-5 br-round black hover-scale-up-1 ease-400" id="social_n"><i
-                            data-feather="instagram" class="absolute-center h-4"></i></a>
+                <div class="col-md-3 ">
+                    <div class="row text-center">
+                        <div class="col mb-5 d-flex justify-content-center align-items-center">
+                            <a href="https://www.instagram.com/u2p.kz/" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram text-dark" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                  </svg>
+                            </a>
+                        </div>
+                        <div class="col mb-5 d-flex justify-content-center align-items-center">
+                            <a href="https://twitter.com/Karton4ik2" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter-x text-dark" viewBox="0 0 16 16">
+                                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                                  </svg>
+                            </a>
+                        </div>
+                        <div class="col mb-5 d-flex justify-content-center align-items-center">
+                            <a href="https://github.com/cardboardchik" target="_blank" class="btn bg-light d-flex justify-content-center align-items-center social_media_btn rounded-circle" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github text-dark" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                                  </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
-   
-    <!-- <a class="fixed top-50pc right-0 p-3 bg-indigo white hover-scale-up-1 ease-300 no-underline" href="https://gum.co/tifJM" target="_blank" >
-        <i class="w-4" data-feather="download"></i>-->
-    </div>
+       
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
     
 </body>
