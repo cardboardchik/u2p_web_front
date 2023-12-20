@@ -13,6 +13,12 @@ $(document).ready(function () {
 
 });
 
+// preloader
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        document.querySelector("body").classList.add("loaded");
+    }, 50)
+  });
 
 
 if (sessionStorage.getItem("user") != null){
